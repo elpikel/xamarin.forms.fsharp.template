@@ -1,0 +1,38 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>F# template for Xamarin.Forms</Name>
+    <Description>F# template for Xamarin.Forms</Description>
+    <ProjectType>FSharp</ProjectType>
+    <ProjectSubType>CSharp</ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>FSharpXamarinForms</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>mobile.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <SolutionFolder Name="App">
+        <ProjectTemplateLink ProjectName="$projectname$.Main" CopyParameters="true">
+          src\App\Xamarin.Forms.Main\Xamarin.Forms.Main.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$projectname$.Pages" CopyParameters="true">
+          src\App\Xamarin.Forms.Pages\Xamarin.Forms.Pages.vstemplate
+        </ProjectTemplateLink>
+      </SolutionFolder>
+      <SolutionFolder Name="Platforms">
+        <ProjectTemplateLink ProjectName="$projectname$.Droid" CopyParameters="true">
+          src\Platforms\Xamarin.Forms.Droid\Xamarin.Forms.Droid.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$projectname$.iOS" CopyParameters="true">
+          src\Platforms\Xamarin.Forms.iOS\Xamarin.Forms.iOS.vstemplate
+        </ProjectTemplateLink>
+        <ProjectTemplateLink ProjectName="$projectname$.UWP" CopyParameters="true">
+          src\Platforms\Xamarin.Forms.UWP\Xamarin.Forms.UWP.vstemplate
+        </ProjectTemplateLink>
+      </SolutionFolder>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>
